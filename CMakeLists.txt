@@ -7,9 +7,6 @@ set(PROJECT_NAME "leech")
 # Project Name
 project(${PROJECT_NAME})
 
-# Subdirectories
-add_subdirectory(examples)
-
 # Library Paths
 find_path(GLEW_INCLUDE_DIR NAMES GL/glew.h HINTS ${CMAKE_SOURCE_DIR}/include)
 find_path(GLFW_INCLUDE_DIR NAMES GLFW/glfw3.h HINTS ${CMAKE_SOURCE_DIR}/include)
@@ -39,3 +36,6 @@ if(GLFW_INCLUDE_DIR AND GLFW_LIBRARY)
 else()
   message(FATAL_ERROR "𐄂 GLFW not found")
 endif()
+
+# Subdirectories
+add_subdirectory(examples)
